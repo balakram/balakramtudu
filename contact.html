@@ -177,21 +177,21 @@
             <!-- Left Side Ends -->
             <!-- Contact Form Starts -->
             <div class="col-12 col-lg-8">
-                <form class="contactform" method="post" action="index.html">
+                <form class="contactform" method="post" id="form" action="index.html">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <input type="text" name="name" id="name" required placeholder="YOUR NAME">
+                                <input type="text" name="from_name" id="from_name" placeholder="YOUR NAME">
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="email" name="email" id="email" required placeholder="YOUR EMAIL">
+                                <input type="text" name="senderemail" id="senderemail" placeholder="YOUR EMAIL">
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="text" name="subject" id="subject"  required placeholder="YOUR SUBJECT">
+                                <input type="text" name="subject" id="subject" placeholder="YOUR SUBJECT">
                             </div>
                             <div class="col-12">
-                                <textarea name="message" placeholder="YOUR MESSAGE"></textarea>
-                                <button  type="submit id="message"  class="btn btn-contact">Send Message</button>
+                                <textarea type="text" name="message" id="message" placeholder="YOUR MESSAGE"></textarea>
+                                <button  type="submit" id="button" value="Send Email"  class="btn btn-contact">Send Message</button>
                             </div>
                             <div class="col-12 form-message">
                                 <span class="output_message text-center font-weight-600 text-uppercase"></span>
@@ -205,6 +205,38 @@
     </div>
 
 </section>
+    <!-- Email script -->
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('iKtD-WUFS7vOBjNtv')
+</script>
+    <script>
+        const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_eaeto8m';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+    </script>
+
+    
+    <!-- Emil script end -->
 <!-- Template JS Files -->
 <script src="js/jquery-3.5.0.min.js"></script>
 <script src="js/styleswitcher.js"></script>
@@ -219,38 +251,7 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
 
-        <script>
-        (function() {
-            emailjs.init('iKtD-WUFS7vOBjNtv'); // Replace 'YOUR_PUBLIC_KEY' with your EmailJS Public Key
-        })();
-        
-        function sendEmail(event) {
-            event.preventDefault();
-            
-            const form = event.target;
-            const name = form.name.value;
-            const email = form.email.value;
-            const subject = form.subject.value;
-            const message = form.message.value;
-
-            const templateParams = {
-                name: name,
-                email: email,
-                subject: subject,
-                message: message
-            };
-
-            emailjs.send('service_f4yulmo', 'template_eaeto8m', templateParams) // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual Service ID and Template ID
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('Thank You! Your message has been sent.');
-                    form.reset(); // Reset the form after successful submission
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    alert('Oops! Something went wrong and we couldn\'t send your message.');
-                });
-        }
-    </script>
+       
 
 </body>
 
