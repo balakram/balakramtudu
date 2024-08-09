@@ -214,26 +214,27 @@
   emailjs.init('iKtD-WUFS7vOBjNtv')
 </script>
     <script>
-        const btn = document.getElementById('button');
+const btn = document.getElementById('button');
+const messageDisplay = document.getElementById('message-display'); // Assuming you have an element with this ID
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
+document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-   btn.value = 'Message Sent!';
+    btn.value = 'Message Sent!';
 
-   const serviceID = 'default_service';
-   const templateID = 'template_eaeto8m';
+    const serviceID = 'default_service';
+    const templateID = 'template_eaeto8m';
 
-   //emailjs.sendForm(serviceID, templateID, this)
-   // .then(() => {
-     /// btn.value = 'Send Email';
-     // alert('Message Sent!!');
-    //}, (err) => {
-      //btn.value = 'Send Email';
-   //   alert(JSON.stringify(err));
-   // });
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            btn.value = 'Send Email';
+            messageDisplay.textContent = 'Message Sent Successfully!'; // Display success message
+        }, (err) => {
+            btn.value = 'Send Email';
+            messageDisplay.textContent = 'Failed to send message. Please try again.'; // Display error message
+        });
 });
+
     </script>
 
 
