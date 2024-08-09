@@ -177,7 +177,7 @@
             <!-- Left Side Ends -->
             <!-- Contact Form Starts -->
             <div class="col-12 col-lg-8">
-                <form class="contactform" method="post" id="form" action="index.html">
+                <form class="contactform" method="post" id="form" id="myForm" action="index.html">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
@@ -235,7 +235,13 @@ document.getElementById('form')
 });
     </script>
 
-    
+        <!-- Popup -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <p>Message Sent</p>
+            <button id="closePopup">OK</button>
+        </div>
+    </div>
     <!-- Emil script end -->
 <!-- Template JS Files -->
 <script src="js/jquery-3.5.0.min.js"></script>
@@ -250,6 +256,23 @@ document.getElementById('form')
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('myForm');
+    const popup = document.getElementById('popup');
+    const closePopup = document.getElementById('closePopup');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevents the form from submitting normally
+        popup.classList.remove('hidden'); // Shows the popup
+    });
+
+    closePopup.addEventListener('click', function() {
+        popup.classList.add('hidden'); // Hides the popup
+    });
+});
+
+    </script>
 
        
 
