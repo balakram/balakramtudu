@@ -38,6 +38,55 @@
     <link rel="alternate stylesheet" type="text/css" title="yellowgreen" href="css/skins/yellowgreen.css" />
     <link rel="stylesheet" type="text/css" href="css/styleswitcher.css" />
 
+    <style>
+        /* Popup overlay styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other content */
+    transition: opacity 0.3s ease;
+}
+
+/* Popup content styles */
+.popup-content {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    width: 300px; /* Fixed width */
+    max-width: 90%; /* Responsive max width */
+}
+
+/* Button styles */
+.popup-content button {
+    background-color: #007bff; /* Bootstrap blue or any color you prefer */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Hide the popup by default */
+.hidden {
+    display: none;
+}
+    </style>
+
     <!-- Modernizr JS File -->
     <script src="js/modernizr.custom.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
