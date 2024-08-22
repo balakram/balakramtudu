@@ -30,12 +30,6 @@ My portfolio showcases a range of projects, from web applications to AI-driven s
 - 💻 **Smart Traffic Management Using AI:** An AI-driven solution for efficient traffic management.
   
 
-## Skills
-
-- **Programming Languages:** PHP, HTML, CSS, JavaScript, Python, Java
-- **Web Technologies:** HTML, CSS, JavaScript, Node.js, React, TypeScript, Next.js
-- **Tools & Platforms:** Git, Docker, AWS
-- **Other Skills:** Machine Learning, Information Security, Database Management
 ## 🚀 Skills
 
 - **Programming Languages:**
