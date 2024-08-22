@@ -17,7 +17,7 @@
 
 ### About Me
 
-I am **Balakram Tudu**, a passionate **B.Tech Computer Science and Engineering** student with a focus on web development, software engineering, and information security. I have experience working with various technologies including **PHP**, **JavaScript**, **Node.js**, **React**, and **machine learning**.
+I am **Balakram Tudu**, a passionate **B.Tech Computer Science and Engineering** student with a focus on web development, software engineering, and information security. I have experience working with various technologies including **PHP**,**HTML**, **CSS**, **JavaScript**, **Node.js**, **React**, and **machine learning**.
 
 ## Overview
 
@@ -28,11 +28,12 @@ My portfolio showcases a range of projects, from web applications to AI-driven s
 - 📚 **Book Tracker Website:** A platform to track books and upload PDFs, with HTML, CSS, and JavaScript.
 - 🎮 **Puzzle Game:** A customizable puzzle game with different grid sizes and image upload features.
 - 💻 **Smart Traffic Management Using AI:** An AI-driven solution for efficient traffic management.
+  
 
 ## Skills
 
-- **Programming Languages:** PHP, JavaScript, Python, C++
-- **Web Technologies:** HTML, CSS, Node.js, React
+- **Programming Languages:** PHP, HTML, CSS, JavaScript, Python, Java
+- **Web Technologies:** HTML, CSS, JavaScript, Node.js, React, TypeScript, Next.js
 - **Tools & Platforms:** Git, Docker, AWS
 - **Other Skills:** Machine Learning, Information Security, Database Management
 
