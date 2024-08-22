@@ -68,8 +68,8 @@ I have worked on various projects that demonstrate my ability to design, develop
 If you'd like to connect, collaborate, or learn more about my work, feel free to reach out:
 
 - **GitHub:** [balakram](https://github.com/balakram)
-- **LinkedIn:** [Balakram Tudu](https://www.linkedin.com/in/balakram-tudu)
-- **Email:** [balakram.tudu@example.com](mailto:balakram.tudu@example.com)
+- **LinkedIn:** [Balakram Tudu](https://www.linkedin.com/in/balakramtudu/)
+- **Email:** [balakramtudu81@gmail.com)](mailto:balakramtudu81@gmail.com)
 
 ### License
 
