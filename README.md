@@ -9,7 +9,7 @@
 
   Welcome to my personal portfolio website, where you can explore my projects, skills, and experiences. Whether you're a recruiter, collaborator, or just curious about my work, you'll find everything you need here.
 
-  <a href="https://balakram.github.io/portfolio/"><strong>➥ Visit My Portfolio</strong></a>
+  <a href="https://balakram.github.io/balakramtudu/"><strong>➥ Visit My Portfolio</strong></a>
 
 </div>
 
